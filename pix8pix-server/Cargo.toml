@@ -1,0 +1,6 @@
+[package]
+name = "pix8pix-server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
