@@ -1,5 +1,6 @@
 build
 target
 .devenv
+.direnv
 .android
 local.properties
