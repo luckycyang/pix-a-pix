@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pix8pix/pages/home.dart';
+import 'package:pix8pix/pages/game.dart';
 
 class A extends StatefulWidget {
   const A({super.key});
@@ -17,7 +17,13 @@ class _AState extends State<A> {
       ),
       body: Center(
           child: ElevatedButton.icon(
-              onPressed: () {}, icon: Icon(Icons.home), label: Text('A'))),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return GameScreen();
+                }));
+              },
+              icon: Icon(Icons.home),
+              label: Text('A'))),
     );
   }
 }

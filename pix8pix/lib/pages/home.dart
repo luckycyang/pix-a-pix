@@ -18,7 +18,7 @@ class _HomeState extends State<Home> {
       body: Center(
         child: ElevatedButton.icon(
             onPressed: () {
-              var res = Navigator.pushNamed(context, '/z', arguments: '114514');
+              var res = Navigator.pushNamed(context, '/a', arguments: '114514');
               res.then((value) => print(value));
             },
             icon: Icon(Icons.home),

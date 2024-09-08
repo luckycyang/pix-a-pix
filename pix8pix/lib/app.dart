@@ -16,11 +16,6 @@ class MyApp extends StatelessWidget {
         '/b': (context) => B(),
         '/c': (context) => C()
       },
-      onGenerateRoute: (RouteSettings settings) {
-        if (settings.name == '/z') {
-          return MaterialPageRoute(builder: (context) => C());
-        }
-      },
       onUnknownRoute: (RouteSettings settings) {
         return MaterialPageRoute(builder: (context) => B());
       },
