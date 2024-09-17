@@ -1,16 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:pix8pix/pages/page_s.dart';
+import 'package:pix8pix/pages/tabs/levels.dart';
+import 'package:pix8pix/pages/tabs/profile.dart';
+import 'package:pix8pix/pages/tabs/ranking.dart';
 
-// 迁移 Tabs
-class Home extends StatefulWidget {
-  const Home({super.key});
+class Tabs extends StatefulWidget {
+  const Tabs({super.key});
 
   @override
-  State<Home> createState() => _HomeState();
+  State<Tabs> createState() => _TabsState();
 }
 
-class _HomeState extends State<Home> {
+class _TabsState extends State<Tabs> {
   int _selectedIndex = 0;
+  List<Widget> _pages = [
+    Levels(),
+    ScoreBoard(),
+    LoginPage(),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,6 +28,7 @@ class _HomeState extends State<Home> {
           IconButton(icon: Icon(Icons.share), onPressed: () {}),
         ],
       ),
+      body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         // 底部导航
         items: <BottomNavigationBarItem>[

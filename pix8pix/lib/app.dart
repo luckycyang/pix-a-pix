@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pix8pix/pages/home.dart';
-import 'package:pix8pix/pages/page_s.dart';
+import 'package:pix8pix/pages/tabs.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -9,16 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
-      initialRoute: "/home",
-      routes: {
-        '/home': (context) => Home(),
-        '/a': (context) => A(),
-        '/b': (context) => B(),
-        '/c': (context) => C()
-      },
-      onUnknownRoute: (RouteSettings settings) {
-        return MaterialPageRoute(builder: (context) => B());
-      },
+      home: Tabs(),
     );
   }
 }
